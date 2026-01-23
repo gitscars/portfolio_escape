@@ -612,6 +612,94 @@ footer {
     }
 }
 
+/* Mascot Styles & Animations */
+.mascot {
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+.mascot-hero {
+    width: 200px;
+    bottom: 50px;
+    right: 10%;
+    transform: rotate(5deg);
+    animation: mascotFloat 6s infinite ease-in-out;
+}
+
+.mascot-process {
+    width: 120px;
+    top: -60px;
+    right: 20px;
+    transform: rotate(-10deg);
+    animation: mascotWork 4s infinite ease-in-out;
+}
+
+.mascot-contact {
+    width: 150px;
+    bottom: -40px;
+    left: 20px;
+    animation: mascotWave 5s infinite ease-in-out;
+}
+
+@keyframes mascotFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+}
+
+@keyframes mascotWork {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-15deg) scale(1.05);
+    }
+}
+
+@keyframes mascotWave {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+@media (max-width: 900px) {
+    .mascot-hero {
+        width: 140px;
+        bottom: 20px;
+        right: 5%;
+    }
+
+    .mascot-process {
+        width: 100px;
+        top: -50px;
+    }
+
+    .mascot-contact {
+        width: 120px;
+        bottom: -30px;
+        left: 10px;
+    }
+}
+
 /* Contact Grid Layout */
 .contact-grid {
     display: grid;
