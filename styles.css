@@ -538,3 +538,67 @@ footer {
         /* Asegurarse de que el texto del logo sea visible */
     }
 }
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(to bottom right, var(--bg-secondary), rgba(15, 23, 42, 0.8));
+    padding: 20px;
+    border-radius: var(--card-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.map-container {
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+    filter: invert(90%) hue-rotate(180deg);
+    /* Truco para "Dark Mode" en el mapa gratis */
+}
+
+.contact-info {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Modificar estilos previos de contacto para que encajen mejor */
+.contact-section h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.contact-section p {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-section p {
+        text-align: center;
+    }
+
+    .contact-links {
+        justify-content: center;
+    }
+}
